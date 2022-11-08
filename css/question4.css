@@ -1,5 +1,7 @@
 .mystery-content {
   color: #fff;
+  font-size: 10rem;
+  text-align: center;
 }
 
 .frame {
@@ -24,8 +26,4 @@
 }
 .answer img {
   width: 5rem;
-}
-
-.first-message {
-  opacity: 0;
 }

@@ -1,0 +1,22 @@
+
+.mystery-content{
+  text-align: center;
+  img{
+    width: 20rem;
+  }
+}
+
+.frame{
+  position: relative;
+  border-color: rgb(131 161 255);
+}
+
+.answer{
+  position: absolute;
+  right: -1000rem;
+  top: 50%;
+  img{
+    width: 5rem;
+  }
+}
+

@@ -1,0 +1,30 @@
+
+.mystery-content{
+  color: #fff;
+}
+.frame{
+  position: relative;
+  padding: 0;
+  border-color: rgb(131 161 255);
+  .frame{
+    margin: 0;
+    width: 100%;
+    border-color: rgb(255 158 158);
+    .frame{
+      border-color: #7eda71;
+      padding: 1rem;
+    }
+  }
+}
+
+.answer{
+  position: absolute;
+  right: -1000rem;
+  top: 50%;
+  img{
+    width: 5rem;
+  }
+}
+.first-message{
+  opacity: 0;
+}

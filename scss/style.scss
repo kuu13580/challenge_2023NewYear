@@ -1,0 +1,59 @@
+$breakpoints: (
+  "sp": "screen and (max-width: 520px)",
+  "pc": "screen and (min-width: 521px)",
+  "tab": "screen and (min-width: 600px) and (max-width: 960px)",
+) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+html {
+  overflow-x: hidden;
+  color: #333333;
+  font-size: 62.5%;
+  font-family: "Noto Sans JP", "Arial", "Helvetica", "Segoe UI", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+}
+body{
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
+
+@include mq("sp") {
+  .sp-only {
+    display: block;
+  }
+  .pc-only {
+    display: none;
+  }
+}
+@include mq("pc") {
+  .sp-only {
+    display: none;
+  }
+  .pc-only {
+    display: block;
+  }
+}
+.container {
+  margin: auto;
+  width: 100rem;
+  max-width: 90vw;
+
+  @include mq() {
+    width: 90vw;
+  }
+}
+
+.frame{
+  border-style: ridge;
+  border-width: 1rem;
+  width: 30rem;
+  height: auto;
+  background-color: #fff;
+  margin-top: 2rem;
+  padding: 1rem;
+}

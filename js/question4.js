@@ -1,6 +1,6 @@
 $(function(){
   $(".answer").on("click", (e) => {
-    window.alert("タップされた");
+    window.alert("Clear");
   });
   
   if (!localStorage.hasOwnProperty("reload_count_2")) {

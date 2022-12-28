@@ -7,7 +7,7 @@ $(function () {
     if(check_hour || check_minute){
       localStorage.setItem("moji_count", Number(localStorage.getItem("moji_count")) + 1);
       if(localStorage.getItem("moji_count") == 10){
-        window.alert("OK");
+        window.alert("Clear");
       }
     }
   });

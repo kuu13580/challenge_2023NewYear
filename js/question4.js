@@ -1,6 +1,7 @@
 $(function(){
   $(".answer").on("click", (e) => {
     window.alert("Clear");
+    location.href = "clearchallenge.php";
   });
   
   if (!localStorage.hasOwnProperty("reload_count_2")) {

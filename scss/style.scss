@@ -17,7 +17,7 @@ html {
   font-family: "Noto Sans JP", "Arial", "Helvetica", "Segoe UI", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
     "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
 }
-body{
+body {
   font-size: 1.6rem;
   overflow-x: hidden;
 }
@@ -48,7 +48,7 @@ body{
   }
 }
 
-.frame{
+.frame {
   border-style: ridge;
   border-width: 1rem;
   width: 30rem;
@@ -56,4 +56,74 @@ body{
   background-color: #fff;
   margin-top: 2rem;
   padding: 1rem;
+}
+
+.annotation {
+  visibility: hidden;
+  color: red;
+}
+
+input[type="email"],
+input[type="password"] {
+  border: #333333 solid 1px;
+  border-radius: 5px;
+  text-indent: 0.5em;
+  width: 90%;
+}
+
+.terms-title {
+  text-align: center;
+}
+
+.terms {
+  padding: 1rem;
+  border: #333333 solid 1px;
+  width: 100%;
+  margin: 0 auto;
+  height: 20rem;
+  overflow-y: scroll;
+  font-size: 1rem;
+  ol {
+    list-style-type: decimal;
+    margin-left: 2rem;
+  }
+  p {
+    margin: 1rem 0;
+  }
+  p:first-of-type {
+    margin-top: 0;
+  }
+  em {
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
+.agreement-wrap {
+  text-align: center;
+  span {
+    margin-left: 2rem;
+  }
+}
+#register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > div {
+    margin: 1rem 0;
+    padding: 0 2rem;
+    width: 100%;
+  }
+  
+}
+
+#submit-btn {
+  text-align: center;
+  border: #333333 solid 1px;
+  max-width: 10rem;
+}
+
+h1{
+  font-size: 3rem;
+  text-align: center;
 }

@@ -10,7 +10,8 @@ $(function () {
       await new Promise(resolve => setTimeout(resolve, 5000));
       console.timeLog('Waited for');
       if (localStorage.getItem("reload_count") == 10) {
-        window.alert("Clear");
+        window.alert("クリア!");
+        location.href = "4sADUQx2xgF.html";
       }
       localStorage.setItem("reload_count", 1);
       $(".first-message").fadeTo(1000,1);

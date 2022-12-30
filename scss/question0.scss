@@ -1,0 +1,26 @@
+.tabs{
+  .selected{
+    background-color: #02f03d;
+  }
+  background-color: #a0a0a0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.tab{
+  width: 100%;
+  text-align: center;
+}
+
+.content{
+  .not-selected{
+    display: none;
+  }
+  .is-selected{
+    display: block;
+  }
+  div{
+    margin: 1rem 0;
+  }
+}

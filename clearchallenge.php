@@ -2,6 +2,11 @@
 include "secred_variables.php";
 session_start();
 
+if(!isset($_SESSION["email"])){
+  echo "ERROR: ログインされていません";
+  exit(0);
+}
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -57,22 +62,22 @@ try {
   $mail->setFrom('noreply@amazon.com', 'お年玉チャレンジ'); // 送信者
   $mail->addAddress($_SESSION["email"]);   // 宛先
   // 送信内容設定
-  $mail->isHTML(true);
+  $mail->isHTML(false);
   $mail->Subject = '【お年玉チャレンジ】合言葉'; 
   $body = <<<EOF
-  チャレンジ成功！！<br/>
-  送信元が"amazon.com"になっており、迷惑メールに振り分けられているはずですが、こちらが正規のメールです。<br/>
-  別のダミーが送られています。<br/>
-  合言葉は「迷惑メール」<br/>
-  こっそりと伝えてください。<br/>
+  チャレンジ成功！！
+  送信元が"amazon.com"になっており、迷惑メールに振り分けられているはずですが、こちらが正規のメールです。
+  別のダミーが送られています。
+  合言葉は「迷惑メール」
+  https://kuu13580.com/2023NewYear/check.html
   EOF;
   $mail->Body    = $body;  
   // 送信
   $mail->send();
-  echo "全ステージクリア！<br/>メールを確認してください！<br/>";
+  echo "<div style=\"font-size:30px;padding:1em\">全ステージクリア！<br/>メールを確認してください！<br/></div>";
 } catch (Exception $e) {
   // エラーの場合
-  echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  echo "ERROR: Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
 ?>

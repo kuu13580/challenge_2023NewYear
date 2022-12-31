@@ -1,6 +1,6 @@
 $(function(){
   $(".answer").on("click", (e) => {
-    window.alert("Clear");
+    window.alert("クリア！");
     location.href = "clearchallenge.php";
   });
   

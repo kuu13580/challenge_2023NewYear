@@ -6,6 +6,14 @@ if(!isset($_SESSION["email"])){
   echo "ERROR: ログインされていません";
   exit(0);
 }
+// メールアドレスの存在を確認
+include "_connectDB.php";
+$sql = $dbh->prepare("SELECT COUNT(*) FROM users WHERE email = ?");
+$sql->execute(array($_SESSION["email"]));
+if($sql->fetch()[0] == 0) {// メールアドレスが存在しない
+  echo "ERROR: メールアドレスが登録されていません。";
+}
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;

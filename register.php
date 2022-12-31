@@ -1,7 +1,7 @@
 <?php
 
 if(!isset($_POST["mail-address"]) || !isset($_POST["password"])){
-  echo "mail address is incorrect!";
+  echo "ERROR: POST Data is incorrect!";
   exit(0);
 }
 $email = $_POST["mail-address"];
@@ -13,11 +13,11 @@ $sql->execute(array($email));
 if($sql->fetch()[0] == 1) {// すでに存在する=>更新
   $sql = $dbh->prepare("UPDATE users SET password = ? WHERE email = ?");
   $sql->execute(array($password, $email));
-  echo "登録内容を更新しました。<br/>メールを確認してください。";
+  echo "<div style=\"font-size:30px;padding:1em\">登録内容を更新しました。<br/>メールを確認してください。</div>";
 }else{ //存在しない=>生成
   $sql = $dbh->prepare("INSERT INTO users(email, password) VALUE (?, ?)");
   $sql->execute(array($email, $password));
-  echo "新規に登録しました。<br/>メールを確認してください。";
+  echo "<div style=\"font-size:30px;padding:1em\">新規に登録しました。<br/>メールを確認してください。</div>";
 }
 
 

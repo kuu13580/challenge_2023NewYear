@@ -72,7 +72,7 @@ $_SESSION["password"] = $password;
         <div class="selection"><label><input type="radio" name="radio3">19種類目のコロナウィルスであり、星の名前が株名につけられている</label></div>
       </div>
       <div id="question4" class="not-selected">
-        <div class="question">第四問【】<br/>　</div>
+        <div class="question">第四問【未定】<br/>　</div>
         <div class="selection"><label><input type="radio" name="radio4"></label></div>
         <div class="selection"><label><input type="radio" name="radio4"></label></div>
         <div class="selection"><label><input type="radio" name="radio4"></label></div>

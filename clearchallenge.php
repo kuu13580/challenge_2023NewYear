@@ -13,6 +13,8 @@ $sql->execute(array($_SESSION["email"]));
 if($sql->fetch()[0] == 0) {// メールアドレスが存在しない
   echo "ERROR: メールアドレスが登録されていません。";
 }
+$sql = $dbh->prepare("UPDATE users SET score = 10 WHERE email = ?");
+$sql->execute(array($_SESSION["email"]));
 
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -62,7 +64,8 @@ try {
   $mail->Body    = $body;  
   // 送信
   $mail->send();
-
+  echo "<div style=\"font-size:30px;padding:1em\">全ステージクリア！<br/>メールを確認してください！<br/></div>";
+  sleep(180);
   //以下ホントの送信
   $mail->Username   = $smtp_username_true;   // SMTPサーバーのユーザ名
   $mail->Password   = $smtp_password;           // SMTPサーバーのパスワード
@@ -82,7 +85,6 @@ try {
   $mail->Body    = $body;  
   // 送信
   $mail->send();
-  echo "<div style=\"font-size:30px;padding:1em\">全ステージクリア！<br/>メールを確認してください！<br/></div>";
 } catch (Exception $e) {
   // エラーの場合
   echo "ERROR: Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

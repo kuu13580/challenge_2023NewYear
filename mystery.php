@@ -65,18 +65,15 @@ $_SESSION["password"] = $password;
         <div class="selection"><label><input type="radio" name="radio2">約15%</label></div>
       </div>
       <div id="question3" class="not-selected">
-        <div class="question">第三問【現代常識】<br/>　Covid-19の"19"の由来と"～株"の名前の付け方とは？</div>
-        <div class="selection"><label><input type="radio" name="radio3">2019年に発生しており、ギリシャ文字が株名につけられている</label></div>
-        <div class="selection"><label><input type="radio" name="radio3">2019年に発生しており、星の名前が株名につけられている</label></div>
-        <div class="selection"><label><input type="radio" name="radio3">19種類目のコロナウィルスであり、ギリシャ文字が株名につけられている</label></div>
-        <div class="selection"><label><input type="radio" name="radio3">19種類目のコロナウィルスであり、星の名前が株名につけられている</label></div>
+        <div class="question">第三問【雑学】<br/>　Covid-19の"19"の由来と"コロナ"という名前の由来とは？</div>
+        <div class="selection"><label><input type="radio" name="radio3">2019年に発生しており、ウニ(ラテン語でコロナ)に形が似ているから</label></div>
+        <div class="selection"><label><input type="radio" name="radio3">2019年に発生しており、王冠(ギリシャ語でコロナ)に形が似ているから</label></div>
+        <div class="selection"><label><input type="radio" name="radio3">19種類目のコロナウィルスであり、ウニ(ラテン語でコロナ)に形が似ているから</label></div>
+        <div class="selection"><label><input type="radio" name="radio3">19種類目のコロナウィルスであり、王冠(ギリシャ語でコロナ)に形が似ているから</label></div>
       </div>
       <div id="question4" class="not-selected">
-        <div class="question">第四問【未定】<br/>　</div>
-        <div class="selection"><label><input type="radio" name="radio4"></label></div>
-        <div class="selection"><label><input type="radio" name="radio4"></label></div>
-        <div class="selection"><label><input type="radio" name="radio4"></label></div>
-        <div class="selection"><label><input type="radio" name="radio4"></label></div>
+        <div class="question">第四問【難問】<br/>　現在発見されていない素数をひとつあげよ。</div>
+        <div class="selection"><label><input type="text"></label></div>
       </div>
     </div>
   </div>

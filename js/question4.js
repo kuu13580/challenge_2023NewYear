@@ -10,7 +10,7 @@ $(function(){
     localStorage.setItem("reload_count_2", Number(localStorage.getItem("reload_count_2")) + 1);
     (async () => {
       console.time('Waited for');
-      await new Promise(resolve => setTimeout(resolve, 5000));
+      await new Promise(resolve => setTimeout(resolve, 2000));
       console.timeLog('Waited for');
       if (localStorage.getItem("reload_count_2") == 7) {
         $(".answer").css("right", - window.innerWidth / 2 + "px");

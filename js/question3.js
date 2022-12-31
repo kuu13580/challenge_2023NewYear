@@ -7,9 +7,9 @@ $(function () {
     localStorage.setItem("reload_count", Number(localStorage.getItem("reload_count")) + 1);
     (async () => {
       console.time('Waited for');
-      await new Promise(resolve => setTimeout(resolve, 5000));
+      await new Promise(resolve => setTimeout(resolve, 2000));
       console.timeLog('Waited for');
-      if (localStorage.getItem("reload_count") == 10) {
+      if (localStorage.getItem("reload_count") == 5) {
         window.alert("クリア!");
         location.href = "4sADUQx2xgF.html";
       }

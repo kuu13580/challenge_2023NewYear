@@ -17,8 +17,8 @@ if($sql->fetch()[0] == 0) {// メールアドレスが存在しない
 $sql = $dbh->prepare("UPDATE users SET score = 10 WHERE email = ?");
 $sql->execute(array($_SESSION["email"]));
 
-echo "<div style=\"font-size:30px;padding:1em\">全ステージクリア！<br/>メールを確認してください！<br/></div>";
-$cmd = "nohup php sendClearMail.php ".$_SESSION["email"]." > /dev/null &";
-exec($cmd);
+echo "<div style=\"font-size:30px;padding:1em\">全ステージクリア！</div>";
+// $cmd = "nohup php sendClearMail.php ".$_SESSION["email"]." > /dev/null &";
+// exec($cmd);
 
 ?>
